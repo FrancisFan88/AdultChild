@@ -15,21 +15,22 @@ namespace AdultChild
                 { FirstName = "Snooby", LastName = "Bear" };
             Console.WriteLine(adult1.FirstName);
             Console.WriteLine(child1.FirstName);
-            /*
+            /**/
+            Console.WriteLine("Array Begins");
             IPerson[] persons = new Adult[2];
             persons[0] = adult1;
             persons[1] = child1;
-            
+            /*
             Console.WriteLine(persons[0].FirstName);
             Console.WriteLine(persons[1].FirstName);
             */
-            /*
+            
             foreach (var item in persons)
             {
                 Console.WriteLine(item.FirstName);
                 Console.WriteLine(item.LastName);
             }
-            */
+            
             
         }
     }
@@ -49,12 +50,13 @@ namespace AdultChild
 
         //public string FirstName  { get; set; }
         //public string LastName  { get; set; }
+
+        //public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        //public string LastName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         private string _firstName;
         public string FirstName { get => _firstName; set => _firstName = value; }
         private string _lastName;
         public string LastName { get => _lastName; set => _lastName = value; }
-        //public string FirstName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        //public string LastName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
     public class Child : IPerson
     {
